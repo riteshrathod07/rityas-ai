@@ -1,5 +1,5 @@
 const API_URL =
-  "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent";
+  "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent";
 
 const SYSTEM_PROMPT = `
 You are RITYA'S AI, a friendly, intelligent and helpful personal AI assistant.
