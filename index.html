@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#09090f">
+  <title>RITYA'S AI</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="app">
+
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-icon">R</div>
+      <div>
+        <h2>RITYA'S AI</h2>
+        <span>Your personal AI</span>
+      </div>
+      <button class="close-sidebar" id="closeSidebar">×</button>
+    </div>
+
+    <button class="new-chat" id="newChat">
+      <span>＋</span> New Chat
+    </button>
+
+    <div class="history-title">RECENT CHATS</div>
+    <div class="history-list" id="historyList"></div>
+
+    <div class="sidebar-bottom">
+      <button class="side-option" id="settingsBtn">⚙ Settings & API Key</button>
+      <div class="profile">
+        <div class="avatar">R</div>
+        <div>
+          <strong>RITYA'S AI</strong>
+          <small>Free AI Assistant</small>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <header class="topbar">
+      <button class="menu-btn" id="menuBtn">☰</button>
+      <div class="mobile-brand">RITYA'S <span>AI</span></div>
+      <div class="model-label"><span class="online-dot"></span> Gemini AI</div>
+    </header>
+
+    <section class="chat-area" id="chatArea">
+
+      <div class="welcome" id="welcome">
+        <div class="welcome-logo">R</div>
+        <div class="welcome-tag">✦ YOUR PERSONAL AI ASSISTANT</div>
+        <h1>Hey there, <span>Welcome!</span></h1>
+        <p>I'm RITYA'S AI. Ask me anything, let's create something amazing together.</p>
+
+        <div class="suggestions">
+          <button class="suggestion" data-prompt="Write a beautiful romantic message for someone special ❤️">
+            <span>❤️</span>
+            <div><b>Romantic messages</b><small>Express your feelings</small></div>
+          </button>
+          <button class="suggestion" data-prompt="Teach me JavaScript from beginner to advanced with examples.">
+            <span>💻</span>
+            <div><b>Learn coding</b><small>Build something amazing</small></div>
+          </button>
+          <button class="suggestion" data-prompt="Give me 5 creative business ideas that I can start with zero investment.">
+            <span>💡</span>
+            <div><b>Creative ideas</b><small>Think outside the box</small></div>
+          </button>
+          <button class="suggestion" data-prompt="Tell me an interesting mystery or fact that will blow my mind.">
+            <span>🌎</span>
+            <div><b>Explore something</b><small>Discover new things</small></div>
+          </button>
+        </div>
+      </div>
+
+      <div class="messages" id="messages"></div>
+
+    </section>
+
+    <footer class="composer-area">
+      <div class="composer">
+        <textarea id="userInput" placeholder="Message RITYA'S AI..." rows="1"></textarea>
+        <button id="sendBtn" class="send-btn" aria-label="Send message">
+          ↑
+        </button>
+      </div>
+      <div class="disclaimer">
+        RITYA'S AI can make mistakes. Always verify important information.
+      </div>
+    </footer>
+
+  </main>
+</div>
+
+<!-- SETTINGS MODAL -->
+<div class="modal-overlay" id="settingsModal">
+  <div class="modal">
+    <button class="modal-close" id="closeModal">×</button>
+    <div class="modal-icon">⚙</div>
+    <h2>AI Settings</h2>
+    <p>Connect your free Gemini API key to start chatting.</p>
+
+    <label for="apiKey">Gemini API Key</label>
+    <input id="apiKey" type="password" placeholder="Paste your API key here">
+
+    <button class="save-btn" id="saveKey">Save API Key</button>
+    <p class="security-note">Your key is stored only in this browser session. Never share your API key publicly.</p>
+    <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">Get a free API key ↗</a>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
